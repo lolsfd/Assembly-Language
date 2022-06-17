@@ -1,9 +1,4 @@
-/*
-* ¨t¯Å¡G¸ê¤u¤G 
-* ¾Ç¸¹¡G4109056008 
-* ©m¦W¡G³¯¬FÂE 
-* Ápµ¸¹q¤l¶l¥ó¡Gangel65020765@gmail.com
-*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include <math.h>
@@ -237,14 +232,14 @@ int main() {
 	opcode=fopen("opcode.txt","r");
 	fptr3= fopen("Symboltable.txt","w+");
 	listPointer node=(listPointer)malloc(sizeof(listNode));
-	if(opcode!=NULL)                  //Åª¨úopcode 
+	if(opcode!=NULL)                  //è®€å–opcode 
 	{
 		while(fscanf(opcode,"%s %s",&op,&loc) != EOF)
 		{
 			create(op,loc);
 		}
 	}
-	if(fptr!=NULL)					//Åª¨úsource.txt 
+	if(fptr!=NULL)					//è®€å–source.txt 
 	{
 		char buffer[15];
 		char label[10];
@@ -252,7 +247,7 @@ int main() {
 		char loc[5];
 		int i,cnt,precnt,flag;
 		fscanf(fptr,"%s\t%s\t%s ",label,op,loc);
-		if(strcmp(op,"START")==0)  //Åª¨ú²Ä¤@¦æ 
+		if(strcmp(op,"START")==0)  //è®€å–ç¬¬ä¸€è¡Œ 
 		{
 			offloc=atoi(loc);
 			strcpy(a,label);
